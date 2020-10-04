@@ -1,11 +1,26 @@
 import React from 'react'
 import { PhotoCard } from '../PhotoCard'
-import { photos } from '../../../api/db.json'
 
-export const ListOfPhotoCard = () => (
-  <ul>
-    {
-      photos.map(photo => <PhotoCard key={photo.id} id={photo.id} {...photo} />)
-    }
-  </ul>
-)
+/* const withPhotos = graphql(gql`
+query getPhotos {
+  photos {
+    id
+    categoryId
+    src
+    likes
+    userId
+    liked
+  }
+}`) */
+
+export const ListOfPhotoCards = () => {
+  return (
+    <ul>
+      {
+        [1, 2, 3, 4].map(id => <PhotoCard key={id} id={id} />)
+      }
+    </ul>
+  )
+}
+
+/* export const ListOfPhotoCards = withPhotos(ListOfPhotoCardsComponent) */
