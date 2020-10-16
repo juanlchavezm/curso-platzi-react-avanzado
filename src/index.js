@@ -10,7 +10,7 @@ const client = new ApolloClient({
 })
 
 ReactDOM.render(
-  <Context.Provider value={{ isAuth: false }}>
+  <Context.Provider>
     <ApolloProvider client={client}>
       <App />
     </ApolloProvider>
